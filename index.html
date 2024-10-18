@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información del Examen - Aplicaciones Distribuidas I</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <style>
+        body {
+            padding-top: 20px;
+        }
+        .logo {
+            width: 80%;
+            max-width: 200px;
+        }
+        @media (max-width: 767px) {
+            .btn-verificar {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row mb-4 justify-content-center text-center">
+            <div class="col-12 col-md-2 mb-3 mb-md-0">
+                <img src="uns-logo.png" alt="UNS Logo" class="logo mx-auto d-block">
+            </div>
+            <div class="col-12 col-md-10">
+                <h1 class="h2">Aplicaciones Distribuidas I</h1>
+                <h2 class="h4">Escuela Profesional de Ingeniería de Sistemas e Informática</h2>
+                <h3 class="h5">Guía para el Examen de Aplicaciones Distribuidas I - Primera Unidad</h3>
+            </div>
+        </div>
+
+        <div class="alert alert-info">
+            <h4 class="h5"><i class="bi bi-info-circle-fill"></i> Instrucciones para el examen:</h4>
+            <ol>
+                <li>Las preguntas 1 a 20 son de opción múltiple, cada una vale 0.5 puntos.</li>
+                <li>Lea cuidadosamente cada pregunta y seleccione la mejor alternativa.</li>
+                <li>La pregunta 21 es una pregunta de dibujo de arquitectura, vale 10 puntos.</li>
+            </ol>
+        </div>
+
+        <h4 class="h5 mb-3"><i class="bi bi-pencil-fill"></i> Práctica de preguntas</h4>
+        <p class="mb-4">A continuación, encontrarás una serie de preguntas de práctica relacionadas con los temas del examen. Intenta responderlas para prepararte mejor.</p>
+
+        <div id="preguntas-practica"></div>
+
+        <div class="alert alert-warning mt-4">
+            <h4 class="h5"><i class="bi bi-lightbulb-fill"></i> Preparación para la pregunta 21:</h4>
+            <p>Para la pregunta 21, que vale 10 puntos, te recomendamos estudiar las diapositivas de la semana 04 donde se abordan las siguientes arquitecturas de sistemas distribuidos:</p>
+            <ul>
+                <li>Cliente-Servidor: Separación clara de roles, escalabilidad centralizada.</li>
+                <li>Serverless: Escalado automático, pago por uso, reducción de la gestión de infraestructura.</li>
+                <li>P2P (Peer-to-Peer): Descentralización, resistencia a fallos, compartición de recursos.</li>
+                <li>Microservicios: Modularidad, despliegue independiente, escalabilidad granular.</li>
+            </ul>
+            <p>Además, es crucial entender la importancia de los protocolos de comunicación en sistemas distribuidos, como HTTP entre otros.</p>
+            <p>Prepárate para diagramar un sistema distribuido complejo. Por ejemplo, considera la arquitectura de Yape, una aplicación de pagos móviles:</p>
+            <ul>
+                <li>Frontend móvil:
+                    <ul>
+                        <li>Aplicación nativa para iOS (Swift) y Android (Kotlin)</li>
+                        <li>Interfaz de usuario intuitiva para transferencias, pagos y gestión de cuentas</li>
+                        <li>Implementación de seguridad biométrica (huella dactilar, reconocimiento facial)</li>
+                    </ul>
+                </li>
+                <li>Backend con microservicios:
+                    <ul>
+                        <li>Servicio de autenticación: gestión de tokens JWT, integración con OAuth 2.0</li>
+                        <li>Servicio de transacciones: procesamiento en tiempo real, consistencia eventual</li>
+                        <li>Servicio de notificaciones: push notifications, SMS, correos electrónicos</li>
+                        <li>Servicio de gestión de usuarios: perfiles, preferencias, historial</li>
+                    </ul>
+                </li>
+                <li>Base de datos distribuida:
+                    <ul>
+                        <li>Uso de Apache Cassandra para alta disponibilidad y escalabilidad horizontal</li>
+                        <li>Replicación multi-región para reducir la latencia y mejorar la resiliencia</li>
+                    </ul>
+                </li>
+                <li>Integración con sistemas bancarios externos:
+                    <ul>
+                        <li>APIs RESTful para comunicación con bancos asociados</li>
+                        <li>Implementación de protocolos de seguridad bancaria (ej. 3-D Secure)</li>
+                    </ul>
+                </li>
+                <li>Capa de seguridad:
+                    <ul>
+                        <li>Encriptación end-to-end para datos sensibles</li>
+                        <li>Implementación de firewall de aplicaciones web (WAF)</li>
+                        <li>Sistema de detección y prevención de intrusiones (IDS/IPS)</li>
+                    </ul>
+                </li>
+                <li>Sistema de caché distribuido:
+                    <ul>
+                        <li>Uso de Redis para almacenamiento en caché de datos frecuentemente accedidos</li>
+                        <li>Implementación de políticas de expiración y actualización de caché</li>
+                    </ul>
+                </li>
+                <li>Servicios de análisis de datos en tiempo real:
+                    <ul>
+                        <li>Uso de Apache Kafka para procesamiento de streams de datos</li>
+                        <li>Implementación de Apache Spark para análisis de big data y machine learning</li>
+                    </ul>
+                </li>
+            </ul>
+            <p>Practica dibujando estos componentes y cómo interactúan entre sí. Por ejemplo:</p>
+            <ul>
+                <li>Muestra cómo el frontend se comunica con los microservicios a través de una API Gateway</li>
+                <li>Ilustra cómo los microservicios interactúan entre sí y con la base de datos distribuida</li>
+                <li>Representa el flujo de datos desde una transacción iniciada en el móvil hasta su procesamiento y almacenamiento</li>
+                <li>Dibuja cómo el sistema de caché distribuido se integra para mejorar el rendimiento de las consultas frecuentes</li>
+                <li>Visualiza cómo los servicios de análisis de datos en tiempo real procesan la información para generar insights</li>
+            </ul>
+            <p>Recuerda incluir elementos de seguridad, como firewalls y capas de encriptación, para demostrar cómo se protege el sistema distribuido en múltiples puntos.</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
